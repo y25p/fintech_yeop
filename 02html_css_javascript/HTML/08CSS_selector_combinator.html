@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/02CSS_selector_combinator.css"
+    <title><b>CSS셀렉터 복합셀렉터</b></title>
+</head>
+<body>
+    <h1>후손요소 div p</h1>
+    <div>
+        <p>후손요소1</p>
+        <p>후손요소2</p>
+        <span><p>후손요소 3</p></span>
+    </div>
+    <p>후손요소 4</p>  
+
+
+    <hr>
+
+    <h1>인접 형제 셀렉터</h1>
+    <p>The first paragraph.</p>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <span>A span element</span>    
+    <a href="#">무제링크</a>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+  
+    <h2>Another list</h2>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>    
+
+    <h3>Another list</h3>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>        
+
+    <h4>Another list</h4>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>    
+<hr>
+<h1>가상 클래스 셀렉터</h1>
+<a href="#">Hover me</a><br><br>
+<input type="text" placeholder="focus me">
+<input type="text" value="포커스 들어오면 빨갛게 변해요">
+<input type="password" value="포커스 들어오면 녹색으로 변해요">
+
+
+<hr>
+<h1>구조 가상클래스 셀렉터 first-child, last-child</h1>
+<div>
+    <p>div의 첫째 자식  </p>
+    <p>div의 둘째 자식 </p>
+    <p>div의 막내 자식 </p>
+    <div>
+        <p>안쪽 div의 첫째 </p>
+        <p>안쪽 div의 막내 </p>
+    </div>
+    <p>여기다가 놓으면 바깥div의 막내인가?</p>
+
+</div>
+
+/*페이지에있는 어떤값들중에 몇번째를 선택*/
+<hr>
+<h1>셀렉터:nth-child(n), 셀렉터:nth-last-child(n)</h1>
+
+<ol>
+    <li>에스프레소</li>
+    <li>아메리카노</li>
+    <li>카페 라떼</li>
+    <li>카페 모카</li>
+    <li>카라멜 마끼</li>
+    <li>카푸치노</li>
+</ol>
+<ul>
+    <li>에스프레소</li>
+    <li>아메리카노</li>
+    <li>카페 라떼</li>
+    <li>카페 모카</li>
+    <li>카라멜 마끼</li>
+    <li>카푸치노</li>
+</ul>
+
+
+</body>
+</html>

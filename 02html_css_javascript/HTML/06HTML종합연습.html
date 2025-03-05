@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML기본요소 테스트페이지</title>
+</head>
+<body>
+    <header>
+        <h1>HTML기본요소 테스트페이지</h1>
+        <b>소개 | </b> <b>목록 | </b> <b>설문조사 | </b> <b>팀원 정보</b> 
+    </header>
+
+    <hr>
+    <h2>소개</h2>
+    <p>이 페이지는 HTML의 자주 사용하는 태그들을 테스트하기 위해 만들어졌습니다.</p>
+
+    <hr>
+    <h2>목록 테스트</h2> 
+    <div>
+        <b>순서 있는 목록 (ol)</b>
+        <ol>
+            <li>HTML 배우기</li>
+            <li>CSS 배우기</li>
+            <li>JavaScript 배우기</li>            
+        </ol>
+     </div>
+     <div>
+        <b>순서 없는 목록 (ul)</b>
+        <ul>
+            <li><b>노트북</b></li>
+            <li><b>키보드</b></li>
+            <li><b>마우스</b></li>            
+        </ul>        
+     </div>
+    
+
+    
+
+    <hr>
+    <h2>설문조사 폼</h2><br>
+    <div>
+        <label>이름:</label>
+        <input type="name"><br>
+        <label>이메일:</label>
+        <input type="email">
+    </div>
+    <div>
+        <h4> 1.좋아하는 과일을 선택하세요 (체크박스) </h4>
+
+        <input type="checkbox" value="fruit"        
+        <label>사과</label>
+        <input type="checkbox" value="fruit"
+        <label>바나나</label>
+        <input type="checkbox" value="fruit"     
+        <label>포도</label>
+
+    </div>
+    <div>
+        <h4>2.선호하는 개발 언어는 무엇인가요?</h4>
+        <input type="radio" name="language" value="HTML"
+        <label>HTML</label>
+        <input type="radio" name="language" value="CSS"
+        <label>CSS</label>
+        <input type="radio" name="language" value="JavaScript"  
+        <label>JavaScript</label>
+     
+    </div>
+        <b>의견:</b><br>
+        <textarea></textarea>
+        <input type="submit">        
+
+    </form>
+
+    <hr>
+    <h2>팀원 정보 표</h2><br>
+    <figcaption>프로젝트 팀원 목록</figcaption>
+ 
+    <table>
+        <table border="1">
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+
+
+    <footer></footer>
+</body>
+</html>

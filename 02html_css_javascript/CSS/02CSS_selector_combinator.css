@@ -1,0 +1,137 @@
+/* 복합 셀렉터 combinator */
+/* 부모 자식 조상 자손/후손 */
+
+/* 후손 셀렉터 */
+/* 셀렉터A 셀렉터B div p */
+/* 후손까지 선택되서 {영향}받음 */
+
+div p{
+    color: black;
+}
+
+/* 자식 셀렉터 child combinator */
+/* 셀렉터A > 셀렉터B*/
+div>p{
+    color: black
+}
+/* 전부빨갛게 하래놓고 다시 자식셀렉터인 p만 파랗게 하라고한것*/
+/* 연습. 스팬의 자식 p의 컬러를 바꾸기*/
+span > p {
+    color:brown
+}
+
+/* sibling combinator */
+/* 형제 관계에서 뒤에 위치하는 요소를 선택할 때 사용*/
+
+/* 인접 형제 셀렉터 */
+/* 셀렉터A + 셀렉터B*/
+/* 셀렉터A 바로 뒤에 셀렉터B가 있어야만하고 사이에 아무것도 없어야함.*/
+    p+ul{
+        color:red    
+    }
+
+
+/* 일반 형제 셀렉터*/
+/* 셀렉터A ~ 셀렉터B*/
+/* 두 셀렉터 사이에 뭐가 와도 됨. 그래서 물결*/
+    span ~ ul{
+    color:black
+    }
+
+
+/* 가상 클래스 셀렉터 Pseudo-class selector */
+/* 요소의 특정 상태에 따라 스타일을 정의할 때 사용 */
+/* 특정상태들: */
+/* 마우스가 올라온 상태, 링크 방문하기 전 또는 후, 포커스(텍스트칸을 누름)가 됐을때 */
+
+a:hover{
+    background-color: red;
+}
+
+input:focus{
+    background-color: yellow;
+}
+
+/* 링크 셀렉터 */
+/*  :link 셀렉터가 방문하지 않은 링크 일때를 뜻함
+    :visited 셀렉터가 방문한 링크일 때
+    :hover 셀렉터에 마우스가 올라와 있을 때
+    :active 셀렉터가 클릭된 상태일 때
+    :focus 셀렉터에 포커스가 들어와 있을 때
+    */
+
+a:link{
+    color: orange
+}
+
+a:visited{
+    color:green
+}
+
+a:active{
+    font-weight: bold;
+}
+
+input[type="text"]:focus{
+    color: red
+}
+
+input[type="password"]:focus{
+    color: blackss
+}
+
+/* 구조 가상 클래스 셀렉터 */
+/* : first-child -셀렉터에 해당하는 요소들 중에서 첫째자식만 선택*/
+/* :last-child -셀렉터에 해당하는 요소들 중에서 마지막자식만 선택*/
+
+p:first-child {
+    color: red
+}
+/*p:last-child {
+    color:blue
+}
+
+/* :nth-child(n), :nth-last-child(n) */
+/* :nth-child(n) - 셀렉트된 모든 요소중 n번째 자식을 선택*/
+/* :nth-last-child(n) - 셀렉트된 모든 요소중 뒤에서 n번째 자식을 선택*/
+/* n은 0부터 시작*/
+
+/* ol의 자식li들중 중 짝수인 li 선택 */
+ol>li:nth-child(2n) {
+    color:antiquewhite
+}
+
+/* ol의 자식 li들 중 홀수번째 li만 선택*/
+ol>li:nth-child(2n+1) {
+    color:aqua
+}
+
+/* ol의 li중 첫째만 선택*/
+ol>li:nth-child(1) {
+    color:blueviolet
+}
+
+ol>li:first-child {
+    font-weight: bold;
+}
+
+ol>li:last-child {
+    color:chartreuse
+}
+
+/* ol의 li중에서 4번째 요소만 선택*/
+ol>li:nth-child(4) {
+    background-color: brown;
+}
+
+/* ul의 뒤에서부터 홀수번인 자식들에게만 nth-lastchild*/
+ul > :nth-last-child(2n+1) {
+    color: red;
+}
+
+/* ul의 뒤에서부터 짝수번인 자식들에게만 nth-lastchild*/
+ul > :nth-last-child(2n) {
+    color:deeppink;
+}
+
+/*
