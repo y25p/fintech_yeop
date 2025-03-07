@@ -1,0 +1,197 @@
+/* 너비와 높이 지정하기 */
+/* width, height */
+/* px:너빗값과 높잇값을 px 단위로 지정*/
+/* %: 부모 태그를 기준 높이와 너비값을 %단위로 지정*/
+/* vw: 웹브라우저의 너비를 기준으로 너빗값과 높잇값을 백분율로 지정*/
+/* vh: 웹브라우저의 높이를 기준으로 너빗값과 높잇값을 백분율로 지정*/
+
+.width_height {
+    border: 1px solid red;
+    width: 100%
+}
+/* article의 부모요소인 div의 크기는 여기서 볼수 있음 디폴트가 100프로라는것 창 가득 찬다는점 확인가능*/
+
+.width_p {
+    border: 1px solid greenyellow;
+    width: 100%
+}
+
+.width_div {
+    border: 1px solid navy
+}
+
+.width_height article {
+    border: 1px solid blue
+}
+
+.width_height article:nth-child(1) {
+    width: 100px;
+    height: 100px;
+}
+
+.width_height article:nth-child(2) {
+    width: 20%;
+    height: 20%;
+}
+
+.width_height article:nth-child(3) {
+    width: 10vw;
+    height: 10vw;
+}
+
+.width_height article:nth-child(4) {
+    width: 10vh;
+    height: 10vh;
+}
+
+
+/**/
+/* 마진 (공간) 조절하기 */
+/* 일단 마진찾아서 빨간 상자 쳐주기*/
+.margin {
+    border: 1px solid red
+}
+
+.margin div {
+    width: 50px;
+    height: 30px;
+    border: 1px solid blue;
+}
+
+/* 상하좌우 20씩 */
+.margin div:nth-child(1){
+    margin: 20px;    
+}
+
+/* 상하20 좌우50 */
+.margin div:nth-child(2){
+    margin: 20px 50px;
+}
+
+/* 상하20 좌우는 자동 */
+.margin div:nth-child(3){
+    margin: 20px auto;
+}
+
+/* %적용 텍스트 정렬 중앙 */
+.margin div:nth-child(4){
+    margin: 5% 5%;
+    text-align: center;
+}
+
+
+/* 위20 좌우는 중앙 아래40 */
+.margin div:nth-child(5){
+    margin: 20px auto 40px;
+    text-align: center;
+}
+
+/* 위 오 왼 아*/
+.margin div:nth-child(6){
+    margin: 0px 10px 20px 30px;
+    text-align: center;
+}
+
+/* margin-방향 */
+.margin div:nth-child(7){
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+/* margin-top 위쪽 여백 값 */
+/* margin-bottom 아래 여백 값 */
+.margin div:nth-child(8){
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* margin-left 왼쪽 여백 값 */
+.margin div:nth-child(9){
+    margin-left: 20px;
+    text-align: center;
+    line-height: 30px   ;
+}
+
+/* 안쪽 여백 지정하기 padding */
+div.padding{
+    border: 1px solid red ;
+}
+
+div.padding div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue ;
+}
+/* 여기까지는 보더선 쳐준것 그리고 파란상자로 크기 100픽셀씩 줌 */
+
+.padding div:last-child {
+    padding: 30px;
+}
+/* 100픽셀씩 보더선줬지만 패딩이 빵빵해지자 크기가 늘어남*/
+/* 보더도 패딩도 결국 width와 height 값 상관없이 줄수있어서 결국 전체값이 늘어나게됨*/
+/* 결국 다른 툴을 이용해 전체 크기값을 고정하게됨 */
+
+
+/**/
+/* padding 2트 */
+/**/
+/* 안쪽 여백과 상관없이 전체크기 고정하기 padding2 */
+div.padding2{
+    border: 1px solid red ;
+}
+
+div.padding2 div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue ;
+}
+
+.padding2 div:first-child {
+    padding: 0px;
+
+}
+
+.padding2 div:last-child {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/**/
+/* 테두리 형태 지정하기 */
+/**/
+div.line_type {
+    border: 1px red;
+}
+
+div.line_type div{
+    border: 1px ;
+    height: 200px;
+    margin: 50px;
+    border: 1px solid blue
+}
+
+
+div.line_type div:nth-child(1) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+
+div.line_type div:nth-child(2) {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: green;
+}
+
+
+div.line_type div:nth-child(3) {
+    border-width: 3px;
+    border-style: dotted;
+    border-color: blue;
+}
+
+div.line_type div:nth-child(4) {
+    border: 10px double black;
+}
+

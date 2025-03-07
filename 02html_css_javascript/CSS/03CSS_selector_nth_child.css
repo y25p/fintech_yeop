@@ -37,9 +37,36 @@ input[type="text"] invalid{
     background-color: red;
 }
 
-/* 가상 요소 셀렉터 */
+/* 가상 요소 셀렉터 영어텍스트 대상 */
 /* ::first-letter: 첫글자를 선택*/
 /* ::first-line: 첫줄을 선택해 블록으로 적용*/
 /* ::after: 뒤에 */
 /* ::before: 앞에*/
 /* ::selection: */
+
+
+.beforafter > p::first-letter {
+    font-size: 3em;
+}
+
+.beforeafter > p::first-line {
+    color:red
+}
+
+/* h1 태그의 콘텐츠 앞 공간에 content속성의 값을 삽입 */
+/* 가상요소에 들어간 글자라서 글자선택이나드래그 안됨 */
+.beforafter > h1::before{
+    content:"HTML!!"
+}
+/* h1 태그의 콘텐츠 뒷 공간에 content속성의 값을 삽입 */
+.beforafter > h1::after{
+    content:"CSS3!!"
+}
+
+/* 드래그하여 콘텐츠 선택 */
+.beforeafter > ::selection {
+    color: red;
+    background: yellow;
+}
+
+

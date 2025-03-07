@@ -1,0 +1,158 @@
+/* 콘텐츠 모양을 자유롭게 변환하기 */
+section {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+section article {
+    width: 100%;
+    height: 100%;
+    background: blue;
+    opacity: 0.3;
+}
+
+
+/* scale(확대축소) 값과 함께씀*/
+/* 1기준으로 작으면 축소 크면 확대*/
+/* 달팽이처럼 축소되면 border는 그대로 남음 */
+section:nth-of-type(1) article {
+    transform: scale(0.8);
+}
+
+
+/* 20deg는 20도 만큼 비틀기 . 음수는 반대방향 */
+section:nth-of-type(2) article {
+    transform: skewX(20deg);
+    transform: skewY(-20deg);
+}
+
+/* px만큼 이동시키기. XY나 음수 허용 */
+section:nth-of-type(3) article {
+    transform: translateY(-70px);
+}
+section:nth-of-type(4) article {
+    transform: translate(70px);
+}
+
+/* px만큼 이동시키기 */
+section:nth-of-type(5) article {
+    transform: rotate(45deg);
+}
+
+
+
+
+/* 콘텐츠 모양을 자유롭게 변환하기 */
+/* 3차원적 변형이 가능한건 아래 perspective때문 */
+.transform2 section {
+    perspective: 400px;
+}
+/*perspective는 원근감을 만드는 태그. px이작을수록 확대 변형심함*/
+
+.transform2 section:nth-of-type(1) article {
+    transform: rotateX(45deg)
+}
+
+.transform2 section:nth-of-type(2) article {
+    transform: rotateY(45deg)
+}
+
+.transform2 section:nth-of-type(3) article {
+    transform: translateZ(100px)
+}
+
+.transform2 section:nth-of-type(4) article {
+    transform: translateZ(-100px)
+}
+
+
+/* 콘텐츠 모양을 자유롭게 변형하기3 */
+/* transform-origin을 중심축을 어디로할지*/
+.transform3 section {
+    perspective: 600px;
+}
+
+.transform3 section:nth-of-type(1) article{
+    transform: rotateY(120deg);
+    transform-origin: center center;
+}
+
+.transform3 section:nth-of-type(2) article{
+    transform: rotateX(120deg);
+    transform-origin: right center;
+}
+
+/* transition으로 전환 효과 적용하기 */
+/* 자바에서만 되었으나 이제 css도 함*/
+.transition .red_box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    color: aliceblue;
+    line-height: 100px;
+}
+
+.transition .red_box:hover {
+    background-color: blue;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+
+/* 전환효과 2 */
+.container .bar {
+    width: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background-color: gray;
+    color: aliceblue;
+    transition-property: width;
+    transition-duration: 5s;
+}
+
+.container:hover .bar {
+    width: 220px;   
+}
+
+/* linear 일정한 속도로 */
+.bar:nth-child(1) {
+    transition-timing-function: linear;
+}
+
+/* ease 점점 느려지기 */
+.bar:nth-child(2) {
+    transition-timing-function: ease;
+}
+
+/* ease-in 느리다 빨라짐 */
+.bar:nth-child(3) {
+    transition-timing-function: ease-in;
+}
+
+/* ease-out 빠르다 느려짐 */
+.bar:nth-child(4) {
+    transition-timing-function: ease-out;
+}
+
+/* ease-in-out  */
+.bar:nth-child(5) {
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
