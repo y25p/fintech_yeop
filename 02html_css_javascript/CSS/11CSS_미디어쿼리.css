@@ -1,0 +1,49 @@
+html {
+    font-size: 80px;
+}
+
+article{
+    width: 40%;
+    height: 20%;
+    background-color: pink;
+    margin: 10px auto;
+    
+}
+
+/* 화면 넓이가 400이하인 경우 */
+@media screen and (max-width: 400px) {
+    article{
+        background-color: aqua;
+        font-size: 20px;
+    }    
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+         
+}
+
+/* 화면 넓이가 900이상인 경우 */
+@media screen and (max-width: 900px) {  
+
+    article{
+        background-color: orange;
+        font-size: 45px
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    
+}
+
+/* 미디어쿼리를 이용해서 화면크기에 반응하여 자동으로 사이즈조절하게 */
+/* 픽셀이아닌 %를 사용해서 화면 크기에 비례하게 바뀌게도 할 수 있다. */
+/* 자바로 넘어감 */
+
+

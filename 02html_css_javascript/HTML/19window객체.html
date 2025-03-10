@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window object</title>
+</head>
+<body>
+    <!--<button onclick="popup()">팝업</button> -->
+    <button onclick="printInfo()">window객체속성</button>
+    <script>
+        //function popup(){
+        //    window.open('popup.html', '팝업', 'width=2000, height=100');
+        //} 
+
+        function printInfo() {
+            console.log(`웹 브라우저의 너비: ${window.innerWidth}`);
+            console.log(`웹 브라우저의 높이: ${window.innerHeight}`);
+            console.log(`웹 브라우저 창의 너비: ${window.outerWidth}`);
+            console.log(`웹 브라우저 창의 높이: ${window.outerHeight}`);
+            console.log(`웹 브라우저 창의 스크롤 가로위치: ${window.scrollX}`);
+            console.log(`웹 브라우저 창의 스크롤 세로위치: ${window.scrollY}`);
+            
+        };
+    </script>  
+
+
+</body>
+</html>
