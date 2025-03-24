@@ -1,0 +1,1 @@
+with open 사용하여 자동 close()편리하다.
