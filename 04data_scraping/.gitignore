@@ -2,6 +2,6 @@
 data/
 dist/
 build/
-*.exe
 *.json
 *.csv
+*.exe
