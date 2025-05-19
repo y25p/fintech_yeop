@@ -1,0 +1,1 @@
+docker run -it --gpus all -p 8888:8888 -v C:/fintech:/tf/fintech --name tf2.17-gpu-jupyter tensorflow/tensorflow:2.17.0-gpu-jupyter
